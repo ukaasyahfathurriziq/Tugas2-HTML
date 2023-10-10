@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <body style="background-color: rgb(91, 163, 204);"></body>
+    <title>Tabel Pertanian</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        form {
+            width: 78%;
+            margin: 20px auto;
+            background-color: #c6e2f5;
+            padding: 22px;
+            border: 1px solid #050505;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Tabel Pertanian</h1>
+    <table>
+        <tr style="background-color: rgb(101, 190, 241);">
+            <td>Nama Tanaman</td>
+            <td>Jumlah Tanaman (hektar)</td>
+            <td>Harga Tanaman (per kg)</td>
+        </tr>
+        <tr>
+            <td>Padi</td>
+            <td>55</td>
+            <td>10000</td>
+        </tr>
+        <tr>
+            <td>Jagung</td>
+            <td>40</td>
+            <td>7500</td>
+        </tr>
+        <tr>
+            <td>Tebu</td>
+            <td>35</td>
+            <td>7000</td>
+        </tr>
+    </table>
+    <h2>Form Pertanian</h2>
+    
+        <form action="proses_form.php" method="post">
+        <label for="nama_tanaman">Nama Tanaman:</label>
+        <input type="text" id="nama_tanaman" name="nama_tanaman" required><br><br>
+
+        <label for="jumlah_tanaman">Jumlah Tanaman (hektar):</label>
+        <input type="number" id="jumlah_tanaman" name="jumlah_tanaman" required><br><br>
+
+        <label for="harga_tanaman">Harga Tanaman (per kg):</label>
+        <input type="number" id="harga_tanaman" name="harga_tanaman" required><br><br>
+
+        <label for="jenis_tanaman">Jenis Tanaman:</label>
+        <select id="jenis_tanaman" name="jenis_tanaman">
+            <option value="Padi">Padi</option>
+            <option value="Jagung">Jagung</option>
+            <option value="Tebu">Tebu</option>
+    </select><br><br>
+
+    <label for="deskripsi">Deskripsi:</label><br>
+    <textarea id="deskripsi" name="deskripsi" rows="4" cols="50"></textarea><br><br>
+
+    <input type="submit" value="Kirim">
+    </form>
+</body>
+</html>
